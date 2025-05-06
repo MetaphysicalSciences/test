@@ -1,0 +1,64 @@
+body {
+  background-color: #111;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+#settings {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#settingsPanel {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #555;
+}
+
+.hidden {
+  display: none;
+}
+
+.character {
+  position: relative;
+  display: inline-block;
+  margin-top: 80px;
+}
+
+.character img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#dialogueBox {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.95);
+  color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-top: 2px solid #333;
+}
+
+#nameTag {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #85cdfd;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+#dialogueText {
+  font-size: 1.1em;
+  text-align: left;
+  line-height: 1.5;
+}

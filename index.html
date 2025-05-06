@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visual Novel - Jude</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="settings">
+    <button onclick="toggleSettings()">Settings ⚙️</button>
+    <div id="settingsPanel" class="hidden">
+      <h2>Settings</h2>
+      <label>
+        <input type="checkbox" id="toggle18" onchange="verifyAge()"> Enable 18+ Content
+      </label>
+    </div>
+  </div>
+
+  <div class="character">
+    <img id="base" src="images/Jude.png" alt="Jude base">
+    <img id="bra" src="images/JudeBra.png" alt="Jude Bra Layer">
+    <img id="clothes" src="images/Judecloths.png" alt="Jude Clothes Layer">
+  </div>
+
+  <div id="dialogueBox" onclick="advanceDialogue()">
+    <div id="nameTag">Jude</div>
+    <div id="dialogueText"></div>
+  </div>
+
+  <script src="dialogue.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
