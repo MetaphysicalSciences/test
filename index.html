@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Visual Novel - Jude</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div id="settings">
-    <button onclick="toggleSettings()">Settings ⚙️</button>
-    <div id="settingsPanel" class="hidden">
-      <h2>Settings</h2>
-      <label>
-        <input type="checkbox" id="toggle18" onchange="verifyAge()"> Enable 18+ Content
-      </label>
+  <div id="app">
+    <div id="settings">
+      <button onclick="verifyAge()">I am 18+</button>
+    </div>
+
+    <div id="game">
+      <div id="character-container">
+        <img id="jude-base" src="Jude.png" alt="Jude">
+        <img id="jude-bra" src="JudeBra.png" alt="Jude Bra">
+        <img id="jude-clothes" src="Judecloths.png" alt="Jude Clothes">
+      </div>
+
+      <div id="actions">
+        <button id="remove-clothes" onclick="toggleClothes()" disabled>Remove Clothes</button>
+        <button id="remove-bra" onclick="toggleBra()" disabled>Remove Bra</button>
+      </div>
+
+      <div id="dialogue-box">
+        <div id="dialogue-text">Jude: Hey there! Welcome to my world.</div>
+        <button onclick="nextDialogue()">Next</button>
+      </div>
     </div>
   </div>
 
-  <div class="character">
-    <img id="base" src="images/Jude.png" alt="Jude base">
-    <img id="bra" src="images/JudeBra.png" alt="Jude Bra Layer">
-    <img id="clothes" src="images/Judecloths.png" alt="Jude Clothes Layer">
-  </div>
-
-  <div id="dialogueBox" onclick="advanceDialogue()">
-    <div id="nameTag">Jude</div>
-    <div id="dialogueText"></div>
-  </div>
-
-  <script src="dialogue.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
