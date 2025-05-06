@@ -1,30 +1,33 @@
-function toggleSettings() {
-  const panel = document.getElementById('settingsPanel');
-  panel.classList.toggle('hidden');
+let dialogueIndex = 0;
+const dialogueLines = [
+  "Jude: Hey there! Welcome to my world.",
+  "Jude: It's nice to meet you.",
+  "Jude: Feel free to ask me anything.",
+  "Jude: Or just hang out with me."
+];
+
+function nextDialogue() {
+  dialogueIndex = (dialogueIndex + 1) % dialogueLines.length;
+  document.getElementById("dialogue-text").innerText = dialogueLines[dialogueIndex];
 }
 
 function verifyAge() {
-  const checkbox = document.getElementById('toggle18');
-  const bra = document.getElementById('bra');
-  const clothes = document.getElementById('clothes');
-
-  if (checkbox.checked) {
-    const age = prompt("Are you 18 or older? Type your age:");
-    if (parseInt(age) >= 18) {
-      clothes.style.display = "none";
-      bra.style.display = "block";
-    } else {
-      alert("You must be 18 or older to view this content.");
-      checkbox.checked = false;
-    }
+  const allow = confirm("Are you really 18 or older?");
+  if (allow) {
+    document.getElementById("remove-clothes").disabled = false;
+    document.getElementById("remove-bra").disabled = false;
+    alert("Access granted.");
   } else {
-    clothes.style.display = "block";
-    bra.style.display = "block";
+    alert("Access denied.");
   }
 }
 
-// Initial visibility
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById('bra').style.display = 'block';
-  document.getElementById('clothes').style.display = 'block';
-});
+function toggleClothes() {
+  const clothes = document.getElementById("jude-clothes");
+  clothes.style.display = clothes.style.display === "none" ? "block" : "none";
+}
+
+function toggleBra() {
+  const bra = document.getElementById("jude-bra");
+  bra.style.display = bra.style.display === "none" ? "block" : "none";
+}
