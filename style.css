@@ -1,64 +1,62 @@
 body {
-  background-color: #111;
-  color: white;
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#app {
   text-align: center;
-  overflow-x: hidden;
 }
 
-#settings {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-#settingsPanel {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #555;
-}
-
-.hidden {
-  display: none;
-}
-
-.character {
+#character-container {
   position: relative;
   display: inline-block;
-  margin-top: 80px;
+  width: 400px;
+  height: auto;
 }
 
-.character img {
+#character-container img {
   position: absolute;
   top: 0;
   left: 0;
+  width: 400px;
 }
 
-#dialogueBox {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: rgba(20, 20, 20, 0.95);
-  color: #f0f0f0;
-  padding: 20px;
-  box-sizing: border-box;
+#settings {
+  margin-bottom: 20px;
+}
+
+#actions {
+  margin: 15px;
+}
+
+button {
+  background-color: #444;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin: 5px;
   cursor: pointer;
-  border-top: 2px solid #333;
+  border-radius: 5px;
 }
 
-#nameTag {
-  font-weight: bold;
-  font-size: 1.2em;
-  color: #85cdfd;
-  margin-bottom: 8px;
-  text-align: left;
+button:disabled {
+  background-color: #222;
+  cursor: not-allowed;
 }
 
-#dialogueText {
-  font-size: 1.1em;
-  text-align: left;
-  line-height: 1.5;
+#dialogue-box {
+  margin-top: 20px;
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
