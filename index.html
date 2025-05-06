@@ -1,36 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Visual Novel - Jude</title>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image in Corner</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="app">
-    <div id="settings">
-      <button onclick="verifyAge()">I am 18+</button>
+    <div id="image-container">
+        <img id="jude-image" src="jude.jpg" alt="Jude">
     </div>
 
-    <div id="game">
-      <div id="character-container">
-        <img id="jude-base" src="Jude.png" alt="Jude">
-        <img id="jude-bra" src="JudeBra.png" alt="Jude Bra">
-        <img id="jude-clothes" src="Judecloths.png" alt="Jude Clothes">
-      </div>
-
-      <div id="actions">
-        <button id="remove-clothes" onclick="toggleClothes()" disabled>Remove Clothes</button>
-        <button id="remove-bra" onclick="toggleBra()" disabled>Remove Bra</button>
-      </div>
-
-      <div id="dialogue-box">
-        <div id="dialogue-text">Jude: Hey there! Welcome to my world.</div>
-        <button onclick="nextDialogue()">Next</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
