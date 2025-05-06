@@ -1,4 +1,4 @@
-// You can add any interactive functionality you want here, for now, this just ensures the image is loaded
-document.getElementById("jude-image").onload = function() {
-    console.log("Image 'Jude' has been loaded.");
+// This is a placeholder for any dynamic behavior you may want to add
+window.onload = function() {
+    console.log("Image 'Jude' is now in the bottom left corner.");
 };
